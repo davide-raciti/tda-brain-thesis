@@ -1,4 +1,3 @@
-import os
 import pickle
 import numpy as np
 import pandas as pd
@@ -7,7 +6,6 @@ from sklearn.preprocessing import StandardScaler
 from config import (
     EMOTIONS_DIR, EMOTION_PKL, FMRI_DIR,
     FILM_LENGTHS, TR_OFFSET, EXCLUDED_SUBJECTS,
-    CPM_SLICES, DISCRETE_EMOTIONS,
 )
 
 
