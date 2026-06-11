@@ -1,11 +1,18 @@
 # generated outputs — run scripts locally to reproduce
 results/
 
+# raw data and Mapper graphs (not committed)
+data/
+0_graphs_html/
+
 # python
 __pycache__/
 *.pyc
 *.pyo
 .env
+.venv/
+venv/
+env/
 
 # jupyter
 .ipynb_checkpoints/
@@ -13,3 +20,4 @@ __pycache__/
 # OS
 .DS_Store
 desktop.ini
+Thumbs.db
