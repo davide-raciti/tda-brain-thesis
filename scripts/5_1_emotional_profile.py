@@ -8,7 +8,7 @@ Outputs
 results/5_1/
     entropy_ranking.csv         — per-film Shannon entropy (bits), sorted
     radar_<film>.png            — film-average radar chart (discrete emotions)
-    alignment_matrix.csv        — inter-subject correlation matrix per film
+    emotion_coherence.csv       — intra-film emotion coherence (mean pairwise r over 7 dims)
 """
 
 import sys

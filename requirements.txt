@@ -1,7 +1,14 @@
+# Core scientific stack
 numpy
 pandas
 networkx>=3.0
 matplotlib
 scipy
 scikit-learn
+
+# Degree-distribution / power-law analysis (scripts/5_2b_power_law.py)
 powerlaw
+
+# Mapper construction (src/mapper_builder.py, scripts/run_pipeline.py)
+tda-mapper          # provides the `tdamapper` module (MapperAlgorithm, CubicalCover)
+reciprocal-isomap   # provides the `reciprocal_isomap` module (ReciprocalIsomap lens)

@@ -6,6 +6,10 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(r"C:\Users\dvdrc\Desktop\BrainMapper_Movie")
 
+# Repo-internal locations (relative to this file, independent of PROJECT_ROOT)
+REPO_ROOT   = Path(__file__).resolve().parent.parent
+RESULTS_DIR = REPO_ROOT / "results"   # CSV/PNG outputs written by the analysis scripts (5_*)
+
 # ─────────────────────────────────────────────────────────────────────────────
 # DATA PATHS
 # ─────────────────────────────────────────────────────────────────────────────
@@ -15,6 +19,16 @@ EMOTIONS_DIR   = DATA_RAW / "3FA_films"           # emotion TSV files (3FA_13_<f
 EMOTION_PKL    = DATA_RAW / "emotion_ts_dict.pkl"  # All50_Emotion time series
 FMRI_DIR       = DATA_RAW / "TC_emofilms"          # fMRI time series by resolution
 GRAPHS_DIR     = PROJECT_ROOT / "0_graphs_html"    # saved Mapper graphs (JSON)
+PRIMARY_CONFIG     = "100_riso"                     # reference configuration for the main analyses
+PRIMARY_GRAPHS_DIR = GRAPHS_DIR / PRIMARY_CONFIG / "graphs"  # JSON graphs read by the figure scripts
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FIGURE OUTPUT
+# Folder where the fig_*.py scripts save the thesis images.
+# EDIT THIS to point at your own thesis image directory.
+# ─────────────────────────────────────────────────────────────────────────────
+
+FIGURES_DIR    = PROJECT_ROOT / "tesi_Davide_overleaf" / "images"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SUBJECTS

@@ -7,7 +7,7 @@ Usage:
     python scripts/fig_node_categories.py [FILM] [SUBJECT]
 
 Defaults to an averaged graph that shows all four categories clearly.
-Output: tesi/images/ch1_node_categories.png
+Output: <FIGURES_DIR>/ch1_node_categories.png   (FIGURES_DIR set in src/config.py)
 """
 import sys
 import os
@@ -19,9 +19,10 @@ from matplotlib.patches import Patch
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from graph_metrics import json_to_networkx, node_category, lcc_of  # noqa: E402
+from config import FIGURES_DIR, PRIMARY_GRAPHS_DIR  # noqa: E402
 
-GRAPHS_DIR = r"C:\Users\dvdrc\Desktop\BrainMapper_Movie\0_graphs_html\100_riso\graphs"
-OUT_PATH   = r"C:\Users\dvdrc\Desktop\BrainMapper_Movie\tesi\images\ch1_node_categories.png"
+GRAPHS_DIR = str(PRIMARY_GRAPHS_DIR)
+OUT_PATH   = os.path.join(str(FIGURES_DIR), "ch1_node_categories.png")
 
 # colour-blind-friendly palette, one colour per category
 COLORS = {
